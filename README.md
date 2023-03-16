@@ -29,7 +29,11 @@ You can also set the collection in the query request as a prop.
 
 ### Getting Data
 
-`await atlasAPI.find({
-collection: "users",
-filter: {userId: 1}
+```
+const response = await atlasAPI.find({
+    collection: "users", // optional
+    filter: {userId: 1}
 })
+
+console.log(response.documents);
+```
