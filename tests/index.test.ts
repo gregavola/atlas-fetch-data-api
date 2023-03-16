@@ -7,16 +7,10 @@ const runTest = async () => {
     apiKey: "test",
     collection: "test",
     apiUrl:
-      "https://us-east-1.aws.data.mongodb-api.com/app/data-fnmwe/endpoint/data/v1",
+      "https://us-east-1.aws.data.mongodb-api.com/app/XXX/endpoint/data/v1",
   });
 
-  const response = await atlasAPI.findOne({
-    filter: {
-      userId: "test",
-    },
-  });
-
-  console.log(response);
+  console.log(atlasAPI);
   process.exit();
 };
 

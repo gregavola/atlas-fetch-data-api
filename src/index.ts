@@ -1,3 +1,5 @@
+import fetch from "node-fetch";
+
 import {
   AtlasContructorProps,
   AtlasReadResponse,
@@ -47,7 +49,8 @@ export class Atlas {
     });
 
     if (response.status != 200) {
-      throw new Error(await response.json());
+      const { error } = await response.json();
+      throw new Error(error);
     } else {
       return await response.json();
     }
