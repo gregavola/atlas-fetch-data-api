@@ -25,7 +25,7 @@ yarn add atlas-fetch-data-api
 At the top of your file, you can import this package as such:
 
 ```
-import Atlas from 'atlas-fetch-data-api
+import Atlas from 'atlas-fetch-data-api'
 ```
 
 ### Initalizing
