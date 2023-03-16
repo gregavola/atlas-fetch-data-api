@@ -10,6 +10,19 @@ The existing library, uses Axios, which isn't support Edge functions and this li
 
 All methods `find`, `findOne`, `updateOne`, `updateMany`, `aggegate`, `deleteOne`, `deleteMany`, `replaceOne` are supported. You can find more documentation on Mongo's website here: https://www.mongodb.com/docs/atlas/api/data-api-resources
 
+### Installing
+
+You can install via `npm` or `yarn`:
+
+`npm i atlas-fetch-data-api`
+`yarn add atlas-fetch-data-api`
+
+### Importing
+
+At the top of your file, you can import this package as such:
+
+`import Atlas from 'atlas-fetch-data-api`
+
 ### Initalizing
 
 ```

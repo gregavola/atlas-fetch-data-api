@@ -1,17 +1,22 @@
+import * as dotenv from "dotenv";
+dotenv.config();
 import { Atlas } from "../src";
+import { expect } from "chai";
 
-const runTest = async () => {
-  const atlasAPI = new Atlas({
-    dataSource: "test",
-    database: "test",
-    apiKey: "test",
-    collection: "test",
-    apiUrl:
-      "https://us-east-1.aws.data.mongodb-api.com/app/XXX/endpoint/data/v1",
+describe("Atlas", () => {
+  it("Testing FindOne", async () => {
+    const atlasAPI = new Atlas({
+      dataSource: process.env.DATA_SOURCE || "",
+      database: process.env.DATABASE || "",
+      apiKey: process.env.API_KEY || "",
+      collection: process.env.COLLECTION || "",
+      apiUrl: process.env.API_URL || "",
+    });
+
+    const response = await atlasAPI.findOne({
+      filter: { accountId: "gregavola" },
+    });
+
+    expect(response.document.accountId).to.equal("gregavola");
   });
-
-  console.log(atlasAPI);
-  process.exit();
-};
-
-runTest();
+});

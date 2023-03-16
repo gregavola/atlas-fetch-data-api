@@ -15,6 +15,12 @@ jobs:
           node-version: 16
       - run: npm install
       - run: npm test
+        env:
+            API_KEY: ${{ secrets.API_KEY }}
+            DATA_SOURCE: ${{ secrets.DATA_SOURCE }}
+            DATABASE: ${{ secrets.DATABASE }}
+            API_URL: ${{ secrets.API_URL }}
+            COLLECTION: ${{ secrets.COLLECTION }}
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
