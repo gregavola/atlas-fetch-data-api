@@ -6,7 +6,7 @@ import {
   AtlasInsertResponse,
   AtlasUpdateResponse,
   AtlasDeleteResponse,
-} from "./types";
+} from "../lib/types";
 
 export class Atlas {
   static dataSource: string;
@@ -263,3 +263,5 @@ export class Atlas {
     );
   };
 }
+
+export default Atlas;

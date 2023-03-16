@@ -14,14 +14,19 @@ All methods `find`, `findOne`, `updateOne`, `updateMany`, `aggegate`, `deleteOne
 
 You can install via `npm` or `yarn`:
 
-`npm i atlas-fetch-data-api`
-`yarn add atlas-fetch-data-api`
+```
+npm i atlas-fetch-data-api
+
+yarn add atlas-fetch-data-api
+```
 
 ### Importing
 
 At the top of your file, you can import this package as such:
 
-`import Atlas from 'atlas-fetch-data-api`
+```
+import Atlas from 'atlas-fetch-data-api
+```
 
 ### Initalizing
 

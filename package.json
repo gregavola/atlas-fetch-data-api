@@ -1,6 +1,6 @@
 {
   "name": "atlas-fetch-data-api",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple library that allows you to connect to Atlas MongoDB via ththeir Data API, using fetch API. This allows you use to this package in Edge Functions on Vercel",
   "scripts": {
     "build": "tsc",
