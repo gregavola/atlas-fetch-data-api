@@ -28,4 +28,18 @@ describe("Atlas", () => {
 
     expect(response.document.accountId).to.equal("gregavola");
   });
+
+  it("Insert One", async () => {
+    const atlasAPI = new Atlas(options);
+
+    const response = await atlasAPI.insertOne({
+      collection: "test-collection",
+      document: {
+        test: 1,
+        createdAt: new Date(),
+      },
+    });
+
+    expect(response.insertedId).exist;
+  });
 });

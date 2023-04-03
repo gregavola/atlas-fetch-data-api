@@ -48,7 +48,7 @@ export class Atlas {
       },
     });
 
-    if (response.status != 200) {
+    if (response.status != 200 && response.status != 201) {
       const { error } = await response.json();
       throw new Error(error);
     } else {
